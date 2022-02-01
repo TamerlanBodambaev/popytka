@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Practice Javascript</h2>
+<h2 id="new"></h2>
+<p id="demo"></p>
+
+<script type = "text/javascript" >
+
+//task 1
+var x='Bodambaev Tamerlan';
+var y='CS-2111';
+        document.getElementById("new").innerHTML=x+" "+y;
+  
+
+//task 2
+const d=new Date();
+document.getElementById("demo").innerHTML=d;
+
+
+//task 3
+var one_day=1000*60*60*24
+var nowaday= new Date();
+var graduation_day = new Date(nowaday.getFullYear(), 11, 25)
+	if (nowaday.getMonth() == 11 && nowaday.getdate() > 25)
+    	graduation_day.setFullYear(graduation_day.getFullYear() + 1)
+var freedom= Math.round(graduation_day.getTime() - nowaday.getTime()) / (one_day);
+var day_freedom=freedom.toFixed(0);
+	document.write(day_freedom + "days left until the freedom!" );
+
+
+//task 4
+function multiplyBy(){
+a=document.getElementById("fn").value;
+b=document.getElementById("sn").value;
+        document.getElementById("result").innerHTML=a*b;
+}
+
+function divideBy() { 
+a=document.getElementById("fn").value;
+b=document.getElementById("sn").value;
+        document.getElementById("result").innerHTML=a/b;
+} 
+
+</script>
+
+
+<form>
+        1st Number : <input type="text" id="fn" /><br>
+        2nd Number: <input type="text" id="sn" /><br>
+
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+</form>
+
+<p>The Result is : <br>
+        <span id = "result"></span>
+</p>
+
+</body>
+</html> 
