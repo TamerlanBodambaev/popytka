@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function registration(){
+	var urname= document.getElementById("t1").value;
+	var p= document.getElementById("t2").value;			
+	var pagain= document.getElementById("t3").value;
+		
+	if(urname==''){
+		alert('Error. Username is empty.');
+	}else if(p==''){
+		alert('Error. Password is empty.');
+	}else if(pagain==''){
+		alert('Error. Repeat password is empty.');
+	}else if(p!=pagain){
+		alert ('Password and Repeat password are not similar');
+		}else{				                            
+		alert('Successful user registration.');
+		}
+}
+	
+function clearFunc(){
+	document.getElementById("t1").value="";
+	document.getElementById("t2").value="";
+	document.getElementById("t3").value="";
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="main">
+
+<div class="h-tag">
+	<h1>Registration</h1>
+</div>
+	
+<div class="login">
+	<table>
+	<tr>
+		<td align="right">Username:</td>
+		<td><input type="text" id="t1" class="tb" /></td>
+	</tr>
+	<tr>
+		<td align="right">Password:</td>
+		<td><input type="password" id="t2" class="tb" /></td>
+	</tr>
+	<tr>
+		<td align="right">Repeat Password:</td>
+		<td><input type="password" id="t3" class="tb" /></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Register" class="btn" onclick="registration()" /></td>
+	</tr>
+	</table>
+</div>
+
+</div>
+</body>
+</html>
